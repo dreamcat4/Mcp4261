@@ -20,11 +20,11 @@ Mcp4261 is a simple object which allows your Arduino to control the MCP4261 digi
 ### Requirements
 
 * [MCP4261 Product Datasheet](ww1.microchip.com/downloads/en/DeviceDoc/22059b.pdf)*
-* [Arduino Spi Library (by Cam Thompson)](http://www.arduino.cc/playground/Code/Spi)! 
+* [The Spi Library by Cam Thompson](http://www.arduino.cc/playground/Code/Spi) (not the official one)! 
 
 \* Sorry, but the previous series of Microchip Digital Potentiometers (any with a total of 5 digits in their name eg 42100) had a very different command syntax and arent supported. They are listed on Page 29 of [the previous MCP 4Xxxx Data Sheet](http://ww1.microchip.com/downloads/en/devicedoc/11195c.pdf).
 
-\! Other versions of Arduino Spi library (such as `SPI.h`) wont work / wernt tested.
+\! Download Cam Thompson's Spi library from the link above. There are several similarly-named versions of this SPI library. The version that comes with the Arduino IDE (`SPI.h`) isn't going to work.
 
 ### Getting Started
 
