@@ -1,6 +1,10 @@
-### Mcp4261
+### MCP4261
 
 A C++ object to control the Microchip MCP4261 Digital Potentiometer. For the Arduino Platform.
+
+### UPDATE
+
+- update the libraryo to work with newer Arduino and new SPI 
 
 ### Introduction
 
