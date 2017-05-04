@@ -4,7 +4,7 @@ A C++ object to control the Microchip MCP4261 Digital Potentiometer. For the Ard
 
 ### UPDATE
 
-- update the libraryo to work with newer Arduino and new SPI 
+- update the library to work with newer Arduino and new SPI 
 
 ### Introduction
 
