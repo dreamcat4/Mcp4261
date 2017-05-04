@@ -6,8 +6,8 @@
 // interrupt disabled,spi enabled,msb 1st,master,clk low when idle,
 // sample on leading edge of clk,system clock/4 rate (fastest).
 // Enable the digital pins 11-13 for SPI (the MOSI,MISO,SPICLK)
-#include <Spi.h>
-#include "Mcp4261.h"
+#include <SPI.h>
+#include "MCP4261.h"
 
 //---------- constructor ----------------------------------------------------
 
@@ -85,8 +85,8 @@ void MCP4261::write(byte cmd_byte, byte data_byte)
 {
   cmd_byte |= kCMD_WRITE;
   ::digitalWrite(slave_select_pin, LOW);
-  byte high_byte = Spi.transfer(cmd_byte);
-  byte low_byte  = Spi.transfer(data_byte);
+  byte high_byte = SPI.transfer(cmd_byte);
+  byte low_byte  = SPI.transfer(data_byte);
   ::digitalWrite(slave_select_pin, HIGH);
   bool result = ~low_byte;
 }
@@ -95,8 +95,8 @@ uint16_t MCP4261::read(byte cmd_byte)
 {
   cmd_byte |= kCMD_READ;
   ::digitalWrite(slave_select_pin, LOW);
-  byte high_byte = Spi.transfer(cmd_byte);
-  byte low_byte  = Spi.transfer(0xFF);
+  byte high_byte = SPI.transfer(cmd_byte);
+  byte low_byte  = SPI.transfer(0xFF);
   ::digitalWrite(slave_select_pin, HIGH);
   return byte2uint16(high_byte, low_byte);
 }

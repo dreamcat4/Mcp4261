@@ -2,8 +2,8 @@
 // MCP4261 2-channel Digital Potentiometer
 // ww1.microchip.com/downloads/en/DeviceDoc/22059b.pdf
 
-#ifndef Mcp4261_h
-#define Mcp4261_h
+#ifndef MCP4261_h
+#define MCP4261_h
 
 class MCP4261
 {
@@ -45,7 +45,7 @@ class MCP4261
     // bool hw_shutdown();
 
   protected:
-    const static float        rW_ohms_typical = 117.50;
+    const float        rW_ohms_typical = 117.50;
     const static unsigned int resolution_7bit = 128;
     const static unsigned int resolution_8bit = 256;
 
