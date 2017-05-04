@@ -6,10 +6,10 @@
 // The Spi library by Cam Thompson. It was originally part of FPU library (micromegacorp.com)
 // Available from http://arduino.cc/playground/Code/Fpu or http://www.arduino.cc/playground/Code/Spi
 // Including Spi.h vv below initializea the MOSI, MISO, and SPI_CLK pins as per ATMEGA 328P
-#include <Spi.h>
+#include <SPI.h>
 
 // Mcp4261 library available from https://github.com/dreamcat4/Mcp4261
-#include <Mcp4261.h>
+#include <MCP4261.h>
 
 // Wire up the SPI Interface common lines:
 // #define SPI_CLOCK            13 //arduino   <->   SPI Slave Clock Input     -> SCK (Pin 02 on MCP4261 DIP)
