@@ -15,12 +15,14 @@ MCP4261::MCP4261(uint8_t slave_select_pin, float rAB_ohms)
 {
   setup_ss(slave_select_pin);
   setup_resistance(rAB_ohms, rW_ohms_typical);
+  SPI.begin();
 }
 
 MCP4261::MCP4261(uint8_t slave_select_pin, float rAB_ohms, float rW_ohms)
 {
   setup_ss(slave_select_pin);
   setup_resistance(rAB_ohms, rW_ohms);
+  SPI.begin();
 }
 
 //------------------ protected -----------------------------------------------
